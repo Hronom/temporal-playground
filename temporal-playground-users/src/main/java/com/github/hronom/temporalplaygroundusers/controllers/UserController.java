@@ -1,5 +1,6 @@
 package com.github.hronom.temporalplaygroundusers.controllers;
 
+import com.github.hronom.temporalplaygroundusers.controllers.dto.ConfirmEmailRequestDto;
 import com.github.hronom.temporalplaygroundusers.controllers.dto.UserDto;
 import com.github.hronom.temporalplaygroundusers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,12 @@ public class UserController {
             @RequestBody UserDto userDto
     ) {
         userService.createUser(userDto);
+    }
+
+    @PostMapping("/user/email/confirm")
+    public void createUser(
+            @RequestBody ConfirmEmailRequestDto confirmEmailRequestDto
+    ) {
+        userService.acceptConfirmation(confirmEmailRequestDto);
     }
 }

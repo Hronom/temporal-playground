@@ -1,6 +1,6 @@
 package com.github.hronom.temporalplaygroundusers.activities.dto;
 
-public class UserRegistrationActivitiesResponse {
+public class SentConfirmationEmailResponse {
     public boolean emailSent;
-    public String emailSendId;
+    public String confirmationToken;
 }

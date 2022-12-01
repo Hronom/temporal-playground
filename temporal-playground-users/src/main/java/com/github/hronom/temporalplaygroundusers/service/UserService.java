@@ -1,6 +1,7 @@
 package com.github.hronom.temporalplaygroundusers.service;
 
 import com.github.hronom.temporalplaygroundusers.AppConstants;
+import com.github.hronom.temporalplaygroundusers.controllers.dto.ConfirmEmailRequestDto;
 import com.github.hronom.temporalplaygroundusers.controllers.dto.UserDto;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
@@ -28,4 +29,8 @@ public class UserService {
         untyped.start(userDto);
     }
 
+    public void acceptConfirmation(ConfirmEmailRequestDto confirmEmailRequestDto) {
+        WorkflowStub untyped = workflowClient.newUntypedWorkflowStub("username_" + confirmEmailRequestDto.username);
+        untyped.signal("acceptConfirmation", confirmEmailRequestDto.token);
+    }
 }
