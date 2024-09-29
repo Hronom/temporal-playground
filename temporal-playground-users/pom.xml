@@ -28,7 +28,7 @@
         <dependency>
             <groupId>io.temporal</groupId>
             <artifactId>temporal-spring-boot-autoconfigure-alpha</artifactId>
-            <version>1.17.0</version>
+            <version>1.23.2</version>
         </dependency>
 
         <dependency>
