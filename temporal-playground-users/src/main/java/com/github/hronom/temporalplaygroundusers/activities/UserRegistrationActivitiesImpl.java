@@ -24,7 +24,7 @@ public class UserRegistrationActivitiesImpl implements UserRegistrationActivitie
         try {
             // Simulating work
             Thread.sleep(TimeUnit.SECONDS.toMillis(5));
-            emailSentId = "string";//UUID.randomUUID().toString();
+            emailSentId = "super_token";//UUID.randomUUID().toString();
         } catch (InterruptedException e) {
             throw Activity.wrap(e);
         }

@@ -17,7 +17,7 @@ import java.util.UUID;
 
 @WorkflowImpl(taskQueues = AppConstants.USER_REGISTRATION_TASK_QUEUE)
 public class UserRegistrationWorkflowImpl implements UserRegistrationWorkflow {
-    private final Logger logger = LoggerFactory.getLogger(UserRegistrationWorkflowImpl.class);
+    private final Logger logger = Workflow.getLogger(UserRegistrationWorkflowImpl.class);
 
     private final ArrayList<String> incomingConfirmationTokens = new ArrayList<>();
 
