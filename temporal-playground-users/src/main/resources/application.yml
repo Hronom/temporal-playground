@@ -8,3 +8,4 @@ spring:
             target.namespace: default
         workersAutoDiscovery:
             packages: com.github.hronom.temporalplaygroundusers
+
